@@ -19,12 +19,12 @@ python train_sts_indomain_semantic.py pretrained_transformer_model_name top_k
 python train_sts_indomain_semantic.py bert-base-uncased 3
 """
 from torch.utils.data import DataLoader
-from sentence_transformers import models, losses, util
-from sentence_transformers import LoggingHandler, SentenceTransformer
-from sentence_transformers.cross_encoder import CrossEncoder
-from sentence_transformers.cross_encoder.evaluation import CECorrelationEvaluator
-from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
-from sentence_transformers.readers import InputExample
+from sentence_transformers_old import models, losses, util
+from sentence_transformers_old import LoggingHandler, SentenceTransformer
+from sentence_transformers_old.cross_encoder import CrossEncoder
+from sentence_transformers_old.cross_encoder.evaluation import CECorrelationEvaluator
+from sentence_transformers_old.evaluation import EmbeddingSimilarityEvaluator
+from sentence_transformers_old.readers import InputExample
 from datetime import datetime
 import logging
 import csv
@@ -68,7 +68,7 @@ logging.info("Loading cross-encoder model: {}".format(model_name))
 cross_encoder = CrossEncoder(model_name, num_labels=1)
 
 
-###### Bi-encoder (sentence-transformers) ######
+###### Bi-encoder (sentence-transformers-old) ######
 logging.info("Loading bi-encoder model: {}".format(model_name))
 # Use Huggingface/transformers model (like BERT, RoBERTa, XLNet, XLM-R) for mapping tokens to embeddings
 word_embedding_model = models.Transformer(model_name, max_seq_length=max_seq_length)

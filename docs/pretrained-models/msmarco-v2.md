@@ -5,7 +5,7 @@ The training data consists of over 500k examples, while the complete  corpus con
  
 ## Usage
 ```python
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 model = SentenceTransformer('msmarco-distilroberta-base-v2')
 
 query_embedding = model.encode('How big is London')

@@ -8,7 +8,7 @@ Knowledge distillation describes the process to transfer knowledge from a  teach
 
 The fast student model imitates the teacher model and achieves by this a high performance. 
 
-![Knowledge Distillation](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/monolingual-distillation.png)
+![Knowledge Distillation](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/monolingual-distillation.png)
 
 
 **[model_distillation.py](model_distillation.py)** implements two options for creating the student model:

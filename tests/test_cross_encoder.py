@@ -8,9 +8,9 @@ import unittest
 
 from torch.utils.data import DataLoader
 import logging
-from sentence_transformers import CrossEncoder, util, LoggingHandler
-from sentence_transformers.readers import InputExample
-from sentence_transformers.cross_encoder.evaluation import CECorrelationEvaluator
+from sentence_transformers_old import CrossEncoder, util, LoggingHandler
+from sentence_transformers_old.readers import InputExample
+from sentence_transformers_old.cross_encoder.evaluation import CECorrelationEvaluator
 
 
 

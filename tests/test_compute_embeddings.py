@@ -4,7 +4,7 @@ Computes embeddings
 
 
 import unittest
-from sentence_transformers import SentenceTransformer
+from sentence_transformers_old import SentenceTransformer
 import numpy as np
 
 class ComputeEmbeddingsTest(unittest.TestCase):

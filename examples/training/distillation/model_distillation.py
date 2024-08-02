@@ -20,9 +20,9 @@ There is a performance - speed trade-off. However, we found that a student with 
 of the teacher performance, while being 2.3 times faster.
 """
 from torch.utils.data import DataLoader
-from sentence_transformers import models, losses, evaluation
-from sentence_transformers import LoggingHandler, SentenceTransformer, util, InputExample
-from sentence_transformers.datasets import ParallelSentencesDataset
+from sentence_transformers_old import models, losses, evaluation
+from sentence_transformers_old import LoggingHandler, SentenceTransformer, util, InputExample
+from sentence_transformers_old.datasets import ParallelSentencesDataset
 import logging
 from datetime import datetime
 import os

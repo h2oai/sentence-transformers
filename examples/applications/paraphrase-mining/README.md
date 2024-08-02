@@ -6,7 +6,7 @@ However, as this has a quadratic runtime, it fails to scale to large (10,000 and
 
 For larger collections, *util* offers the *paraphrase_mining* function that can be used like this:
 ```python
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
@@ -29,7 +29,7 @@ for paraphrase in paraphrases[0:10]:
 
 The **paraphrase_mining()**-method accepts the following parameters:
 ```eval_rst
-.. autofunction:: sentence_transformers.util.paraphrase_mining
+.. autofunction:: sentence_transformers_old.util.paraphrase_mining
 ```
 
 Instead of computing all pairwise cosine scores and ranking all possible, combintations, the approach is a bit more complex (and hence efficient). We chunk our corpus into smaller pieces, which is defined by *query_chunk_size* and *corpus_chunk_size*. For example, if we set *query_chunk_size=1000*, we search paraphrases for 1,000 sentences at a time in the remaining corpus (all other sentences). However, the remaining corpus is also chunked, for example, if we set *corpus_chunk_size=10000*, we look for paraphrases in 10k sentences at a time.

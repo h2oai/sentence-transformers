@@ -9,21 +9,21 @@ We recommend **Python 3.6** or higher, **[PyTorch 1.6.0](https://pytorch.org/get
 
 **Install with pip**
 
-Install the *sentence-transformers* with `pip`:
+Install the *sentence-transformers-old* with `pip`:
 ```
-pip install -U sentence-transformers
+pip install -U sentence-transformers-old
 ```
 
 **Install with conda**
 
-Apple silicon Installation of *sentence-transformers*
+Apple silicon Installation of *sentence-transformers-old*
 ```
-conda install -c conda-forge sentence-transformers
+conda install -c conda-forge sentence-transformers-old
 ```
 
 **Install from sources**
 
-Alternatively, you can also clone the latest version from the [repository](https://github.com/UKPLab/sentence-transformers) and install it directly from the source code:
+Alternatively, you can also clone the latest version from the [repository](https://github.com/UKPLab/sentence-transformers-old) and install it directly from the source code:
 ````
 pip install -e .
 ```` 

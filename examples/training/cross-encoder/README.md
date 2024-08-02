@@ -13,7 +13,7 @@ The `CrossEncoder` class is a wrapper around Huggingface `AutoModelForSequenceCl
 
 First, you need some sentence pair data. You can either have a continious score, like:
 ```python
-from sentence_transformers import InputExample
+from sentence_transformers_old import InputExample
 train_samples = [
   InputExample(texts=['sentence1', 'sentence2'], label=0.3),
   InputExample(texts=['Another', 'pair'], label=0.8),
@@ -22,7 +22,7 @@ train_samples = [
 
 Or you have distinct classes as in the [training_nli.py](training_nli.py) example:
 ```python
-from sentence_transformers import InputExample
+from sentence_transformers_old import InputExample
 label2int = {"contradiction": 0, "entailment": 1, "neutral": 2}
 train_samples = [
   InputExample(texts=['sentence1', 'sentence2'], label=label2int['neutral']),

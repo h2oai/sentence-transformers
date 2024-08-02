@@ -8,7 +8,7 @@ limit the amount of memory used. More info about dataset streaming:
 https://huggingface.co/docs/datasets/stream
 """
 
-from sentence_transformers import SentenceTransformer, LoggingHandler
+from sentence_transformers_old import SentenceTransformer, LoggingHandler
 import logging
 from datasets import load_dataset
 from torch.utils.data import DataLoader

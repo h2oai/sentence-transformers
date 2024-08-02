@@ -3,7 +3,7 @@
 Once you have  [sentence embeddings computed](../../examples/applications/computing-embeddings/README.md), you usually want to compare them to each other. Here, I show you how you can compute the cosine similarity between embeddings, for example, to measure the semantic similarity of two texts.
 
 ```python
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Two lists of sentences
@@ -34,7 +34,7 @@ It returns in the above example a 3x3 matrix with the respective cosine similari
 
 You can use this function also to find out the pairs with the highest cosine similarity scores:
 ```python
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 

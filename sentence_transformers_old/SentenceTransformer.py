@@ -51,7 +51,7 @@ class SentenceTransformer(nn.Sequential):
         self._model_config = {}
 
         if cache_folder is None:
-            cache_folder = os.getenv('SENTENCE_TRANSFORMERS_HOME')
+            cache_folder = os.getenv('sentence_transformers_old_HOME')
             if cache_folder is None:
                 try:
                     from torch.hub import _get_torch_home
@@ -60,7 +60,7 @@ class SentenceTransformer(nn.Sequential):
                 except ImportError:
                     torch_cache_home = os.path.expanduser(os.getenv('TORCH_HOME', os.path.join(os.getenv('XDG_CACHE_HOME', '~/.cache'), 'torch')))
 
-                cache_folder = os.path.join(torch_cache_home, 'sentence_transformers')
+                cache_folder = os.path.join(torch_cache_home, 'sentence_transformers_old')
 
         if model_name_or_path is not None and model_name_or_path != "":
             logger.info("Load pretrained SentenceTransformer: {}".format(model_name_or_path))
@@ -77,7 +77,7 @@ class SentenceTransformer(nn.Sequential):
                     raise ValueError("Path {} not found".format(model_name_or_path))
 
                 if '/' not in model_name_or_path and model_name_or_path.lower() not in basic_transformer_models:
-                    # A model from sentence-transformers
+                    # A model from sentence-transformers-old
                     model_name_or_path = __MODEL_HUB_ORGANIZATION__ + "/" + model_name_or_path
 
                 model_path = os.path.join(cache_folder, model_name_or_path.replace("/", "_"))
@@ -86,7 +86,7 @@ class SentenceTransformer(nn.Sequential):
                     # Download from hub with caching
                     snapshot_download(model_name_or_path,
                                         cache_dir=cache_folder,
-                                        library_name='sentence-transformers',
+                                        library_name='sentence-transformers-old',
                                         library_version=__version__,
                                         ignore_files=['flax_model.msgpack', 'rust_model.ot', 'tf_model.h5'],
                                         use_auth_token=use_auth_token)
@@ -355,12 +355,12 @@ class SentenceTransformer(nn.Sequential):
         #Save some model info
         if '__version__' not in self._model_config:
             self._model_config['__version__'] = {
-                    'sentence_transformers': __version__,
+                    'sentence_transformers_old': __version__,
                     'transformers': transformers.__version__,
                     'pytorch': torch.__version__,
                 }
 
-        with open(os.path.join(path, 'config_sentence_transformers.json'), 'w') as fOut:
+        with open(os.path.join(path, 'config_sentence_transformers_old.json'), 'w') as fOut:
             json.dump(self._model_config, fOut, indent=2)
 
         #Save modules
@@ -598,7 +598,7 @@ class SentenceTransformer(nn.Sequential):
         to make sure of equal training with each dataset.
 
         :param train_objectives: Tuples of (DataLoader, LossFunction). Pass more than one for multi-task learning
-        :param evaluator: An evaluator (sentence_transformers.evaluation) evaluates the model performance during training on held-out dev data. It is used to determine the best model that is saved to disc.
+        :param evaluator: An evaluator (sentence_transformers_old.evaluation) evaluates the model performance during training on held-out dev data. It is used to determine the best model that is saved to disc.
         :param epochs: Number of epochs for training
         :param steps_per_epoch: Number of training steps per epoch. If set to None (default), one epoch is equal the DataLoader size from train_objectives.
         :param scheduler: Learning rate scheduler. Available schedulers: constantlr, warmupconstant, warmuplinear, warmupcosine, warmupcosinewithhardrestarts
@@ -802,23 +802,23 @@ class SentenceTransformer(nn.Sequential):
         """
         Creates a simple Transformer + Mean Pooling model and returns the modules
         """
-        logger.warning("No sentence-transformers model found with name {}. Creating a new one with MEAN pooling.".format(model_name_or_path))
+        logger.warning("No sentence-transformers-old model found with name {}. Creating a new one with MEAN pooling.".format(model_name_or_path))
         transformer_model = Transformer(model_name_or_path)
         pooling_model = Pooling(transformer_model.get_word_embedding_dimension(), 'mean')
         return [transformer_model, pooling_model]
 
     def _load_sbert_model(self, model_path):
         """
-        Loads a full sentence-transformers model
+        Loads a full sentence-transformers-old model
         """
-        # Check if the config_sentence_transformers.json file exists (exists since v2 of the framework)
-        config_sentence_transformers_json_path = os.path.join(model_path, 'config_sentence_transformers.json')
-        if os.path.exists(config_sentence_transformers_json_path):
-            with open(config_sentence_transformers_json_path) as fIn:
+        # Check if the config_sentence_transformers_old.json file exists (exists since v2 of the framework)
+        config_sentence_transformers_old_json_path = os.path.join(model_path, 'config_sentence_transformers_old.json')
+        if os.path.exists(config_sentence_transformers_old_json_path):
+            with open(config_sentence_transformers_old_json_path) as fIn:
                 self._model_config = json.load(fIn)
 
-            if '__version__' in self._model_config and 'sentence_transformers' in self._model_config['__version__'] and self._model_config['__version__']['sentence_transformers'] > __version__:
-                logger.warning("You try to use a model that was created with version {}, however, your version is {}. This might cause unexpected behavior or errors. In that case, try to update to the latest version.\n\n\n".format(self._model_config['__version__']['sentence_transformers'], __version__))
+            if '__version__' in self._model_config and 'sentence_transformers_old' in self._model_config['__version__'] and self._model_config['__version__']['sentence_transformers_old'] > __version__:
+                logger.warning("You try to use a model that was created with version {}, however, your version is {}. This might cause unexpected behavior or errors. In that case, try to update to the latest version.\n\n\n".format(self._model_config['__version__']['sentence_transformers_old'], __version__))
 
         # Check if a readme exists
         model_card_path = os.path.join(model_path, 'README.md')

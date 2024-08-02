@@ -10,7 +10,7 @@ Currently the following models trained on Quora Duplicate Questions are availabl
 
 You can load & use pre-trained models like this:
 ```python
-from sentence_transformers import SentenceTransformer
+from sentence_transformers_old import SentenceTransformer
 model = SentenceTransformer('model_name')
 ```
 
@@ -29,7 +29,7 @@ As a first step, we process this file to create distinct train/dev/test splits f
 - **Duplicate Questions Information Retrieval**: Given a large corpus (350k+) of questions. For a new, unseen question, find the most related (i.e. duplicate) questions in this corpus.
 
 
-**Download**: You can download the finished dataset here: [quora-IR-dataset.zip](https://public.ukp.informatik.tu-darmstadt.de/reimers/sentence-transformers/datasets/quora-IR-dataset.zip)
+**Download**: You can download the finished dataset here: [quora-IR-dataset.zip](https://public.ukp.informatik.tu-darmstadt.de/reimers/sentence-transformers-old/datasets/quora-IR-dataset.zip)
 
 For details on the creation of the dataset, see [create_splits.py](create_splits.py).
 

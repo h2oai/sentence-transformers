@@ -18,7 +18,7 @@ that it aligned for 100 languages. I.e., you can type in a question in various l
 return the closest questions in the corpus (questions in the corpus are mainly in English).
 """
 
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 import os
 from elasticsearch import Elasticsearch, helpers
 import csv

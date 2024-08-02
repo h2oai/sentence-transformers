@@ -11,7 +11,7 @@ In:
 3_programming_semantic_search.py - Shows how the trained model can be used for semantic search
 """
 
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 import gzip
 import json
 import os

@@ -9,10 +9,10 @@ python training_nli.py
 """
 from torch.utils.data import DataLoader
 import math
-from sentence_transformers import LoggingHandler, util
-from sentence_transformers.cross_encoder import CrossEncoder
-from sentence_transformers.cross_encoder.evaluation import CESoftmaxAccuracyEvaluator
-from sentence_transformers.readers import InputExample
+from sentence_transformers_old import LoggingHandler, util
+from sentence_transformers_old.cross_encoder import CrossEncoder
+from sentence_transformers_old.cross_encoder.evaluation import CESoftmaxAccuracyEvaluator
+from sentence_transformers_old.readers import InputExample
 import logging
 from datetime import datetime
 import os

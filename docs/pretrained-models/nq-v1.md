@@ -4,7 +4,7 @@
 ## Usage
 
 ```python
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 model = SentenceTransformer('nq-distilbert-base-v1')
 
 query_embedding = model.encode('How many people live in London?')

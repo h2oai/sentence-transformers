@@ -27,7 +27,7 @@ In our experiments we combine [SNLI](https://arxiv.org/abs/1508.05326) and [Mult
 
 The softmax loss looks like this:
 
-![SBERT SoftmaxLoss](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/SBERT_SoftmaxLoss.png "SBERT SoftmaxLoss")
+![SBERT SoftmaxLoss](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/SBERT_SoftmaxLoss.png "SBERT SoftmaxLoss")
 
 We pass the two sentences through our SentenceTransformer network and get the sentence embeddings *u* and *v*. We then concatenate u, v and |u-v| to form one, long vector. This vector is then passed to a softmax classifier, which predicts our three classes (entailnment, neutral, contradiction).
 
@@ -42,7 +42,7 @@ The training data for MultipleNegativesRankingLoss consists of sentence pairs [(
 
 For example in the following picture:
 
-![](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/MultipleNegativeRankingLoss.png)
+![](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/MultipleNegativeRankingLoss.png)
 
 The distance between (a<sub>1</sub>, b<sub>1</sub>) is reduced, while the distance between (a<sub>1</sub>, b<sub>2...5</sub>) will be increased. The same is done for a<sub>2</sub>, ..., a<sub>5</sub>.
 

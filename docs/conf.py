@@ -22,7 +22,7 @@ from sphinx.domains import Domain
 import datetime
 # -- Project information -----------------------------------------------------
 
-project = 'Sentence-Transformers'
+project = 'sentence-transformers-old'
 copyright = str(datetime.datetime.now().year)+', Nils Reimers'
 author = 'Nils Reimers'
 
@@ -77,7 +77,7 @@ html_show_sourcelink = False
 html_context = {
   'display_github': True,
   'github_user': 'UKPLab',
-  'github_repo': 'sentence-transformers',
+  'github_repo': 'sentence-transformers-old',
   'github_version': 'master/',
 }
 
@@ -94,7 +94,7 @@ class GithubURLDomain(Domain):
     """
 
     name = "githuburl"
-    ROOT = "https://github.com/UKPLab/sentence-transformers/tree/master"
+    ROOT = "https://github.com/UKPLab/sentence-transformers-old/tree/master"
 
     def resolve_any_xref(self, env, fromdocname, builder, target, node, contnode):
         if (target.endswith('.py') or target.endswith('.ipynb')) and not target.startswith('http'):

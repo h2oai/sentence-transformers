@@ -10,9 +10,9 @@ An issue with constrative loss is, that it might push sentences away that are al
 """
 
 from torch.utils.data import DataLoader
-from sentence_transformers import losses, util
-from sentence_transformers import LoggingHandler, SentenceTransformer, evaluation
-from sentence_transformers.readers import InputExample
+from sentence_transformers_old import losses, util
+from sentence_transformers_old import LoggingHandler, SentenceTransformer, evaluation
+from sentence_transformers_old.readers import InputExample
 import logging
 from datetime import datetime
 import csv

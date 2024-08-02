@@ -6,8 +6,8 @@ https://www.quora.com/q/quoradata/First-Quora-Dataset-Release-Question-Pairs
 
 Then, we re-rank the hits from the Bi-Encoder using a Cross-Encoder.
 """
-from sentence_transformers import SentenceTransformer, util
-from sentence_transformers import CrossEncoder
+from sentence_transformers_old import SentenceTransformer, util
+from sentence_transformers_old import CrossEncoder
 import os
 import csv
 import pickle

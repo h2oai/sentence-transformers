@@ -7,8 +7,8 @@ If you want to fine-tune a huggingface/transformers model like bert-base-uncased
 """
 from torch.utils.data import DataLoader
 import math
-from sentence_transformers import SentenceTransformer, LoggingHandler, losses, util, InputExample
-from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
+from sentence_transformers_old import SentenceTransformer, LoggingHandler, losses, util, InputExample
+from sentence_transformers_old.evaluation import EmbeddingSimilarityEvaluator
 import logging
 from datetime import datetime
 import os

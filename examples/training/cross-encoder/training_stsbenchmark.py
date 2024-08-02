@@ -9,10 +9,10 @@ python training_stsbenchmark.py
 """
 from torch.utils.data import DataLoader
 import math
-from sentence_transformers import LoggingHandler, util
-from sentence_transformers.cross_encoder import CrossEncoder
-from sentence_transformers.cross_encoder.evaluation import CECorrelationEvaluator
-from sentence_transformers import InputExample
+from sentence_transformers_old import LoggingHandler, util
+from sentence_transformers_old.cross_encoder import CrossEncoder
+from sentence_transformers_old.cross_encoder.evaluation import CECorrelationEvaluator
+from sentence_transformers_old import InputExample
 import logging
 from datetime import datetime
 import sys

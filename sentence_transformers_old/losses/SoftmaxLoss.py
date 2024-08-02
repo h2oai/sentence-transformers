@@ -22,8 +22,8 @@ class SoftmaxLoss(nn.Module):
 
     Example::
 
-        from sentence_transformers import SentenceTransformer, SentencesDataset, losses
-        from sentence_transformers.readers import InputExample
+        from sentence_transformers_old import SentenceTransformer, SentencesDataset, losses
+        from sentence_transformers_old.readers import InputExample
 
         model = SentenceTransformer('distilbert-base-nli-mean-tokens')
         train_examples = [InputExample(texts=['First pair, sent A', 'First pair, sent B'], label=0),

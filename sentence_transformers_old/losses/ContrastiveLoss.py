@@ -2,7 +2,7 @@ from enum import Enum
 from typing import Iterable, Dict
 import torch.nn.functional as F
 from torch import nn, Tensor
-from sentence_transformers.SentenceTransformer import SentenceTransformer
+from sentence_transformers_old.SentenceTransformer import SentenceTransformer
 
 
 class SiameseDistanceMetric(Enum):
@@ -28,7 +28,7 @@ class ContrastiveLoss(nn.Module):
 
     Example::
 
-        from sentence_transformers import SentenceTransformer, LoggingHandler, losses, InputExample
+        from sentence_transformers_old import SentenceTransformer, LoggingHandler, losses, InputExample
         from torch.utils.data import DataLoader
 
         model = SentenceTransformer('all-MiniLM-L6-v2')

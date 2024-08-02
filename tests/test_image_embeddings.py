@@ -3,7 +3,7 @@ Compute image embeddings
 """
 
 import unittest
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 import numpy as np
 from PIL import Image
 import os

@@ -1,4 +1,4 @@
-from sentence_transformers import util, SentenceTransformer
+from sentence_transformers_old import util, SentenceTransformer
 import unittest
 import numpy as np
 import sklearn

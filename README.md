@@ -1,18 +1,18 @@
 <!--- BADGES: START --->
-[![GitHub - License](https://img.shields.io/github/license/UKPLab/sentence-transformers?logo=github&style=flat&color=green)][#github-license]
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sentence-transformers?logo=pypi&style=flat&color=blue)][#pypi-package]
-[![PyPI - Package Version](https://img.shields.io/pypi/v/sentence-transformers?logo=pypi&style=flat&color=orange)][#pypi-package]
-[![Conda - Platform](https://img.shields.io/conda/pn/conda-forge/sentence-transformers?logo=anaconda&style=flat)][#conda-forge-package]
-[![Conda (channel only)](https://img.shields.io/conda/vn/conda-forge/sentence-transformers?logo=anaconda&style=flat&color=orange)][#conda-forge-package]
-[![Docs - GitHub.io](https://img.shields.io/static/v1?logo=github&style=flat&color=pink&label=docs&message=sentence-transformers)][#docs-package]
+[![GitHub - License](https://img.shields.io/github/license/UKPLab/sentence-transformers-old?logo=github&style=flat&color=green)][#github-license]
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sentence-transformers-old?logo=pypi&style=flat&color=blue)][#pypi-package]
+[![PyPI - Package Version](https://img.shields.io/pypi/v/sentence-transformers-old?logo=pypi&style=flat&color=orange)][#pypi-package]
+[![Conda - Platform](https://img.shields.io/conda/pn/conda-forge/sentence-transformers-old?logo=anaconda&style=flat)][#conda-forge-package]
+[![Conda (channel only)](https://img.shields.io/conda/vn/conda-forge/sentence-transformers-old?logo=anaconda&style=flat&color=orange)][#conda-forge-package]
+[![Docs - GitHub.io](https://img.shields.io/static/v1?logo=github&style=flat&color=pink&label=docs&message=sentence-transformers-old)][#docs-package]
 <!--- 
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/sentence-transformers?logo=pypi&style=flat&color=green)][#pypi-package]
-[![Conda](https://img.shields.io/conda/dn/conda-forge/sentence-transformers?logo=anaconda)][#conda-forge-package] 
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/sentence-transformers-old?logo=pypi&style=flat&color=green)][#pypi-package]
+[![Conda](https://img.shields.io/conda/dn/conda-forge/sentence-transformers-old?logo=anaconda)][#conda-forge-package] 
 --->
 
-[#github-license]: https://github.com/UKPLab/sentence-transformers/blob/master/LICENSE
-[#pypi-package]: https://pypi.org/project/sentence-transformers/
-[#conda-forge-package]: https://anaconda.org/conda-forge/sentence-transformers
+[#github-license]: https://github.com/UKPLab/sentence-transformers-old/blob/master/LICENSE
+[#pypi-package]: https://pypi.org/project/sentence-transformers-old/
+[#conda-forge-package]: https://anaconda.org/conda-forge/sentence-transformers-old
 [#docs-package]: https://www.sbert.net/
 <!--- BADGES: END --->
 
@@ -41,23 +41,23 @@ We recommend **Python 3.6** or higher, **[PyTorch 1.6.0](https://pytorch.org/get
 
 **Install with pip**
 
-Install the *sentence-transformers* with `pip`:
+Install the *sentence-transformers-old* with `pip`:
 
 ```
-pip install -U sentence-transformers
+pip install -U sentence-transformers-old
 ```
 
 **Install with conda**
 
-You can install the *sentence-transformers* with `conda`:
+You can install the *sentence-transformers-old* with `conda`:
 
 ```
-conda install -c conda-forge sentence-transformers
+conda install -c conda-forge sentence-transformers-old
 ```
 
 **Install from sources**
 
-Alternatively, you can also clone the latest version from the [repository](https://github.com/UKPLab/sentence-transformers) and install it directly from the source code:
+Alternatively, you can also clone the latest version from the [repository](https://github.com/UKPLab/sentence-transformers-old) and install it directly from the source code:
 
 ````
 pip install -e .
@@ -72,12 +72,12 @@ If you want to use a GPU / CUDA, you must install PyTorch with the matching CUDA
 
 See [Quickstart](https://www.sbert.net/docs/quickstart.html) in our documenation.
 
-[This example](https://github.com/UKPLab/sentence-transformers/tree/master/examples/applications/computing-embeddings/computing_embeddings.py) shows you how to use an already trained Sentence Transformer model to embed sentences for another task.
+[This example](https://github.com/UKPLab/sentence-transformers-old/tree/master/examples/applications/computing-embeddings/computing_embeddings.py) shows you how to use an already trained Sentence Transformer model to embed sentences for another task.
 
 First download a pretrained model.
 
 ````python
-from sentence_transformers import SentenceTransformer
+from sentence_transformers_old import SentenceTransformer
 model = SentenceTransformer('all-MiniLM-L6-v2')
 ````
 
@@ -109,7 +109,7 @@ We provide a large list of [Pretrained Models](https://www.sbert.net/docs/pretra
 
 This framework allows you to fine-tune your own sentence embedding methods, so that you get task-specific sentence embeddings. You have various options to choose from in order to get perfect sentence embeddings for your specific task. 
 
-See [Training Overview](https://www.sbert.net/docs/training/overview.html) for an introduction how to train your own embedding models. We provide [various examples](https://github.com/UKPLab/sentence-transformers/tree/master/examples/training) how to train models on various datasets.
+See [Training Overview](https://www.sbert.net/docs/training/overview.html) for an introduction how to train your own embedding models. We provide [various examples](https://github.com/UKPLab/sentence-transformers-old/tree/master/examples/training) how to train models on various datasets.
 
 Some highlights are:
 - Support of various transformer networks including BERT, RoBERTa, XLM-R, DistilBERT, Electra, BART, ...
@@ -139,7 +139,7 @@ You can use this framework for:
 
 and many more use-cases.
 
-For all examples, see [examples/applications](https://github.com/UKPLab/sentence-transformers/tree/master/examples/applications).
+For all examples, see [examples/applications](https://github.com/UKPLab/sentence-transformers-old/tree/master/examples/applications).
 
 ## Citing & Authors
 

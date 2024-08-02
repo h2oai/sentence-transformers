@@ -31,9 +31,9 @@ python train_sts_indomain_nlpaug.py
 from torch.utils.data import DataLoader
 import torch
 import math
-from sentence_transformers import SentenceTransformer, LoggingHandler, losses, models, util
-from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
-from sentence_transformers.readers import STSBenchmarkDataReader, InputExample
+from sentence_transformers_old import SentenceTransformer, LoggingHandler, losses, models, util
+from sentence_transformers_old.evaluation import EmbeddingSimilarityEvaluator
+from sentence_transformers_old.readers import STSBenchmarkDataReader, InputExample
 import nlpaug.augmenter.word as naw
 import logging
 from datetime import datetime
@@ -67,7 +67,7 @@ if not os.path.exists(sts_dataset_path):
 
 model_save_path = 'output/bi-encoder/stsb_indomain_eda_'+model_name.replace("/", "-")+'-'+datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-###### Bi-encoder (sentence-transformers) ######
+###### Bi-encoder (sentence-transformers-old) ######
 logging.info("Loading SBERT model: {}".format(model_name))
 # Use Huggingface/transformers model (like BERT, RoBERTa, XLNet, XLM-R) for mapping tokens to embeddings
 word_embedding_model = models.Transformer(model_name)

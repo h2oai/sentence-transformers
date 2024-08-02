@@ -19,7 +19,7 @@ python train_bi-encoder-v3.py
 import sys
 import json
 from torch.utils.data import DataLoader
-from sentence_transformers import SentenceTransformer, LoggingHandler, util, models, evaluation, losses, InputExample
+from sentence_transformers_old import SentenceTransformer, LoggingHandler, util, models, evaluation, losses, InputExample
 import logging
 from datetime import datetime
 import gzip
@@ -130,7 +130,7 @@ with open(queries_filepath, 'r', encoding='utf8') as fIn:
 ce_scores_file = os.path.join(data_folder, 'cross-encoder-ms-marco-MiniLM-L-6-v2-scores.pkl.gz')
 if not os.path.exists(ce_scores_file):
     logging.info("Download cross-encoder scores file")
-    util.http_get('https://huggingface.co/datasets/sentence-transformers/msmarco-hard-negatives/resolve/main/cross-encoder-ms-marco-MiniLM-L-6-v2-scores.pkl.gz', ce_scores_file)
+    util.http_get('https://huggingface.co/datasets/sentence-transformers-old/msmarco-hard-negatives/resolve/main/cross-encoder-ms-marco-MiniLM-L-6-v2-scores.pkl.gz', ce_scores_file)
 
 logging.info("Load CrossEncoder scores dict")
 with gzip.open(ce_scores_file, 'rb') as fIn:
@@ -140,7 +140,7 @@ with gzip.open(ce_scores_file, 'rb') as fIn:
 hard_negatives_filepath = os.path.join(data_folder, 'msmarco-hard-negatives.jsonl.gz')
 if not os.path.exists(hard_negatives_filepath):
     logging.info("Download cross-encoder scores file")
-    util.http_get('https://huggingface.co/datasets/sentence-transformers/msmarco-hard-negatives/resolve/main/msmarco-hard-negatives.jsonl.gz', hard_negatives_filepath)
+    util.http_get('https://huggingface.co/datasets/sentence-transformers-old/msmarco-hard-negatives/resolve/main/msmarco-hard-negatives.jsonl.gz', hard_negatives_filepath)
 
 
 logging.info("Read hard negatives train file")

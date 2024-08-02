@@ -1,8 +1,8 @@
 """
 Tests that the pretrained models produce the correct scores on the STSbenchmark dataset
 """
-from sentence_transformers import SentenceTransformer,  InputExample, util
-from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
+from sentence_transformers_old import SentenceTransformer,  InputExample, util
+from sentence_transformers_old.evaluation import EmbeddingSimilarityEvaluator
 import unittest
 import os
 import gzip

@@ -3,7 +3,7 @@ This application demonstrates how to find duplicate questions (paraphrases) in a
 list of sentences.
 """
 
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 
 # Questions can be a long list of sentences up to 100k sentences or more.
 # For demonstration purposes, we limit it to a few questions which all have on duplicate

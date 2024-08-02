@@ -1,4 +1,4 @@
-from sentence_transformers.evaluation import SentenceEvaluator
+from sentence_transformers_old.evaluation import SentenceEvaluator
 import numpy as np
 import logging
 import os

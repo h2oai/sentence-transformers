@@ -1,6 +1,6 @@
 
-from sentence_transformers import SentenceTransformer, LoggingHandler
-from sentence_transformers import models, util, evaluation, losses
+from sentence_transformers_old import SentenceTransformer, LoggingHandler
+from sentence_transformers_old import models, util, evaluation, losses
 import logging
 import os
 import gzip

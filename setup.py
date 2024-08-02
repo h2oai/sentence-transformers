@@ -6,7 +6,7 @@ with open("README.md", mode="r", encoding="utf-8") as readme_file:
 
 
 setup(
-    name="sentence-transformers",
+    name="sentence-transformers-old",
     version="2.2.2",
     author="Nils Reimers",
     author_email="info@nils-reimers.de",
@@ -14,8 +14,8 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     license="Apache License 2.0",
-    url="https://github.com/UKPLab/sentence-transformers",
-    download_url="https://github.com/UKPLab/sentence-transformers/archive/v2.2.1.zip",
+    url="https://github.com/UKPLab/sentence-transformers-old",
+    download_url="https://github.com/UKPLab/sentence-transformers-old/archive/v2.2.1.zip",
     packages=find_packages(),
     python_requires=">=3.6.0",
     install_requires=[

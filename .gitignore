@@ -6,7 +6,7 @@
 tmp_*.py
 /examples/**/output/*
 examples/datasets/*/
-sentence_transformers.egg-info
+sentence_transformers_old.egg-info
 dist/
 nr_*/
 /examples/datasets/

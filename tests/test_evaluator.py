@@ -1,14 +1,14 @@
 """
 Tests the correct computation of evaluation scores from BinaryClassificationEvaluator
 """
-from sentence_transformers import SentenceTransformer, evaluation, util, losses, LoggingHandler
+from sentence_transformers_old import SentenceTransformer, evaluation, util, losses, LoggingHandler
 import logging
 import unittest
 from sklearn.metrics import f1_score, accuracy_score
 import numpy as np
 import gzip
 import csv
-from sentence_transformers import InputExample
+from sentence_transformers_old import InputExample
 from torch.utils.data import DataLoader
 import os
 

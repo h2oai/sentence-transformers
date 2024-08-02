@@ -3,17 +3,17 @@
 We provide various pre-trained models. Using these models is easy:
 
 ```python
-from sentence_transformers import SentenceTransformer
+from sentence_transformers_old import SentenceTransformer
 model = SentenceTransformer('model_name')
 ```
 
-All models are hosted on the [HuggingFace Model Hub](https://huggingface.co/sentence-transformers).
+All models are hosted on the [HuggingFace Model Hub](https://huggingface.co/sentence-transformers-old).
 
 ## Model Overview
 
 The following table provides an overview of (selected) models. They have been extensively evaluated for their quality to embedded sentences (Performance Sentence Embeddings) and to embedded search queries & paragraphs (Performance Semantic Search).
 
-The **all-*** models where trained on all available training data (more than 1 billion training pairs) and are designed as **general purpose** models. The **all-mpnet-base-v2** model provides the best quality, while **all-MiniLM-L6-v2** is 5 times faster and still offers good quality. Toggle *All models* to see all evaluated models or visit [HuggingFace Model Hub](https://huggingface.co/models?library=sentence-transformers) to view all existing sentence-transformers models. 
+The **all-*** models where trained on all available training data (more than 1 billion training pairs) and are designed as **general purpose** models. The **all-mpnet-base-v2** model provides the best quality, while **all-MiniLM-L6-v2** is 5 times faster and still offers good quality. Toggle *All models* to see all evaluated models or visit [HuggingFace Model Hub](https://huggingface.co/models?library=sentence-transformers-old) to view all existing sentence-transformers-old models. 
 
 
 <iframe src="../_static/html/models_en_sentence_embeddings.html" height="600" style="width:100%; border:none;" title="Iframe Example"></iframe>
@@ -25,7 +25,7 @@ The **all-*** models where trained on all available training data (more than 1 b
 The following models have been specifically trained for **Semantic Search**: Given a question / search query, these models are able to find relevant text passages. For more details, see [Usage - Semantic Search](../examples/applications/semantic-search/README.md).
 
 ```python
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 model = SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
 
 query_embedding = model.encode('How big is London')
@@ -39,16 +39,16 @@ print("Similarity:", util.dot_score(query_embedding, passage_embedding))
 
 ### Multi-QA Models
 
-The following models have been trained on [215M question-answer pairs](https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-dot-v1#training) from various sources and domains, including StackExchange, Yahoo Answers, Google & Bing search queries and many more. These model perform well across many search tasks and domains.
+The following models have been trained on [215M question-answer pairs](https://huggingface.co/sentence-transformers-old/multi-qa-MiniLM-L6-dot-v1#training) from various sources and domains, including StackExchange, Yahoo Answers, Google & Bing search queries and many more. These model perform well across many search tasks and domains.
 
 
 These models were tuned to be used with dot-product:
 
 | Model | Performance Semantic Search (6 Datasets) | Queries (GPU / CPU) per sec. | 
 | --- | :---: | :---: |
-| [multi-qa-MiniLM-L6-dot-v1](https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-dot-v1) | 49.19 | 18,000 / 750 |
-| [multi-qa-distilbert-dot-v1](https://huggingface.co/sentence-transformers/multi-qa-distilbert-dot-v1) | 52.51  | 7,000 / 350 |
-| [multi-qa-mpnet-base-dot-v1](https://huggingface.co/sentence-transformers/multi-qa-mpnet-base-dot-v1) | 57.60 | 4,000 / 170 |
+| [multi-qa-MiniLM-L6-dot-v1](https://huggingface.co/sentence-transformers-old/multi-qa-MiniLM-L6-dot-v1) | 49.19 | 18,000 / 750 |
+| [multi-qa-distilbert-dot-v1](https://huggingface.co/sentence-transformers-old/multi-qa-distilbert-dot-v1) | 52.51  | 7,000 / 350 |
+| [multi-qa-mpnet-base-dot-v1](https://huggingface.co/sentence-transformers-old/multi-qa-mpnet-base-dot-v1) | 57.60 | 4,000 / 170 |
 
 
 
@@ -56,9 +56,9 @@ These models produce normalized vectors of length 1, which can be used with dot-
 
 | Model | Performance Semantic Search (6 Datasets) | Queries (GPU / CPU) per sec. | 
 | --- | :---: | :---: |
-| [multi-qa-MiniLM-L6-cos-v1](https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1) | 51.83 | 18,000 / 750 |
-| [multi-qa-distilbert-cos-v1](https://huggingface.co/sentence-transformers/multi-qa-distilbert-cos-v1) |  52.83 | 7,000 / 350 |
-| [multi-qa-mpnet-base-cos-v1](https://huggingface.co/sentence-transformers/multi-qa-mpnet-base-cos-v1) | 57.46 | 4,000 / 170 |
+| [multi-qa-MiniLM-L6-cos-v1](https://huggingface.co/sentence-transformers-old/multi-qa-MiniLM-L6-cos-v1) | 51.83 | 18,000 / 750 |
+| [multi-qa-distilbert-cos-v1](https://huggingface.co/sentence-transformers-old/multi-qa-distilbert-cos-v1) |  52.83 | 7,000 / 350 |
+| [multi-qa-mpnet-base-cos-v1](https://huggingface.co/sentence-transformers-old/multi-qa-mpnet-base-cos-v1) | 57.46 | 4,000 / 170 |
 
 ### MSMARCO Passage Models
 
@@ -68,18 +68,18 @@ Models tuned to be used with dot-product:
 
 | Model | MSMARCO MRR@10 dev set | Performance Semantic Search (6 Datasets) | Queries (GPU / CPU) per sec. | 
 | --- | :---: | :---: | :---: |
-| [msmarco-distilbert-base-tas-b](https://huggingface.co/sentence-transformers/msmarco-distilbert-base-tas-b) | 34.43 | 49.25 | 7,000 / 350 |
-| [msmarco-distilbert-dot-v5](https://huggingface.co/sentence-transformers/msmarco-distilbert-dot-v5) | 37.25 | 49.47 | 7,000 / 350 |
-| [msmarco-bert-base-dot-v5](https://huggingface.co/sentence-transformers/msmarco-bert-base-dot-v5) | 38.08 | 52.11 | 4,000 / 170 |
+| [msmarco-distilbert-base-tas-b](https://huggingface.co/sentence-transformers-old/msmarco-distilbert-base-tas-b) | 34.43 | 49.25 | 7,000 / 350 |
+| [msmarco-distilbert-dot-v5](https://huggingface.co/sentence-transformers-old/msmarco-distilbert-dot-v5) | 37.25 | 49.47 | 7,000 / 350 |
+| [msmarco-bert-base-dot-v5](https://huggingface.co/sentence-transformers-old/msmarco-bert-base-dot-v5) | 38.08 | 52.11 | 4,000 / 170 |
 
 
 These models produce normalized vectors of length 1, which can be used with dot-product, cosine-similarity and Euclidean distance:
 
 | Model | MSMARCO MRR@10 dev set | Performance Semantic Search (6 Datasets) | Queries (GPU / CPU) per sec. | 
 | --- | :---: | :---: | :---: |
-| [msmarco-MiniLM-L6-cos-v5](https://huggingface.co/sentence-transformers/msmarco-MiniLM-L6-cos-v5) | 32.27 | 42.16 | 18,000 / 750 |
-| [msmarco-MiniLM-L12-cos-v5](https://huggingface.co/sentence-transformers/msmarco-MiniLM-L12-cos-v5) | 32.75 | 43.89 | 11,000 / 400 |
-| [msmarco-distilbert-cos-v5](https://huggingface.co/sentence-transformers/msmarco-distilbert-cos-v5) | 33.79 | 44.98 | 7,000 / 350 |
+| [msmarco-MiniLM-L6-cos-v5](https://huggingface.co/sentence-transformers-old/msmarco-MiniLM-L6-cos-v5) | 32.27 | 42.16 | 18,000 / 750 |
+| [msmarco-MiniLM-L12-cos-v5](https://huggingface.co/sentence-transformers-old/msmarco-MiniLM-L12-cos-v5) | 32.75 | 43.89 | 11,000 / 400 |
+| [msmarco-distilbert-cos-v5](https://huggingface.co/sentence-transformers-old/msmarco-distilbert-cos-v5) | 33.79 | 44.98 | 7,000 / 350 |
 
 [MSMARCO Models - More details](pretrained-models/msmarco-v5.md)
 
@@ -116,12 +116,12 @@ The following models are available with their respective Top 1 accuracy on zero-
 
 | Model | Top 1 Performance |
 | --- | :---: |
-| [clip-ViT-B-32](https://huggingface.co/sentence-transformers/clip-ViT-B-32) | 63.3 |
-| [clip-ViT-B-16](https://huggingface.co/sentence-transformers/clip-ViT-B-16) | 68.1 |
-| [clip-ViT-L-14](https://huggingface.co/sentence-transformers/clip-ViT-L-14) | 75.4 |
+| [clip-ViT-B-32](https://huggingface.co/sentence-transformers-old/clip-ViT-B-32) | 63.3 |
+| [clip-ViT-B-16](https://huggingface.co/sentence-transformers-old/clip-ViT-B-16) | 68.1 |
+| [clip-ViT-L-14](https://huggingface.co/sentence-transformers-old/clip-ViT-L-14) | 75.4 |
 
 We further provide this multilingual text-image model:
-- **clip-ViT-B-32-multilingual-v1** - Multilingual text encoder for the [clip-ViT-B-32](https://huggingface.co/sentence-transformers/clip-ViT-B-32)   model using [Multilingual Knowledge Distillation](https://arxiv.org/abs/2004.09813). This model can encode text in 50+ languages to match the image vectors from the [clip-ViT-B-32](https://huggingface.co/sentence-transformers/clip-ViT-B-32)  model.
+- **clip-ViT-B-32-multilingual-v1** - Multilingual text encoder for the [clip-ViT-B-32](https://huggingface.co/sentence-transformers-old/clip-ViT-B-32)   model using [Multilingual Knowledge Distillation](https://arxiv.org/abs/2004.09813). This model can encode text in 50+ languages to match the image vectors from the [clip-ViT-B-32](https://huggingface.co/sentence-transformers-old/clip-ViT-B-32)  model.
 
 
 ---
@@ -131,7 +131,7 @@ We further provide this multilingual text-image model:
 ### Scientific Publications
 [SPECTER](https://arxiv.org/abs/2004.07180) is a model trained on scientific citations and can be used to estimate the similarity of two publications. We can use it to find similar papers.
 
-- **allenai-specter** - [Semantic Search Python Example](https://github.com/UKPLab/sentence-transformers/blob/master/examples/applications/semantic-search/semantic_search_publications.py) / [Semantic Search Colab Example](https://colab.research.google.com/drive/12hfBveGHRsxhPIUMmJYrll2lFU4fOX06)
+- **allenai-specter** - [Semantic Search Python Example](https://github.com/UKPLab/sentence-transformers-old/blob/master/examples/applications/semantic-search/semantic_search_publications.py) / [Semantic Search Colab Example](https://colab.research.google.com/drive/12hfBveGHRsxhPIUMmJYrll2lFU4fOX06)
 
 
 
@@ -143,7 +143,7 @@ The following models were trained on [Google's Natural Questions dataset](https:
 - **nq-distilbert-base-v1**: MRR10: 72.36 on NQ dev set (small)
 
 ```python
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 model = SentenceTransformer('nq-distilbert-base-v1')
 
 query_embedding = model.encode('How many people live in London?')

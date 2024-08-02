@@ -1,5 +1,5 @@
 # Clustering
-Sentence-Transformers can be used in different ways to perform clustering of small or large set of sentences.
+sentence-transformers-old can be used in different ways to perform clustering of small or large set of sentences.
 
 ## k-Means
 [kmeans.py](kmeans.py) contains an example of using [K-means Clustering Algorithm](https://scikit-learn.org/stable/modules/clustering.html#k-means). K-Means requires that the number of clusters is specified beforehand. The sentences are clustered in groups of about equal size.
@@ -44,12 +44,12 @@ Cluster 47, #25 Elements
 Topic modeling is the process of discovering topics in a collection of documents. 
 
 An example is shown in the following picture, which shows the identified topics in the 20 newsgroup dataset:
-![20news](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/20news_semantic.png) 
+![20news](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/20news_semantic.png) 
 
 For each topic, you want to extract the words that describe this topic:
-![20news](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/20news_top2vec.png) 
+![20news](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/20news_top2vec.png) 
 
-Sentence-Transformers can be used to identify these topics in a collection of sentences, paragraphs or short documents. For an excellent tutorial, see [Topic Modeling with BERT](https://towardsdatascience.com/topic-modeling-with-bert-779f7db187e6) as well as the repositories [Top2Vec](https://github.com/ddangelov/Top2Vec) and [BERTopic](https://github.com/MaartenGr/BERTopic).
+sentence-transformers-old can be used to identify these topics in a collection of sentences, paragraphs or short documents. For an excellent tutorial, see [Topic Modeling with BERT](https://towardsdatascience.com/topic-modeling-with-bert-779f7db187e6) as well as the repositories [Top2Vec](https://github.com/ddangelov/Top2Vec) and [BERTopic](https://github.com/MaartenGr/BERTopic).
  
  
  Image source: [Top2Vec: Distributed Representations of Topics](https://arxiv.org/abs/2008.09470)

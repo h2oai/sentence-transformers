@@ -1,5 +1,5 @@
 __version__ = "2.2.2"
-__MODEL_HUB_ORGANIZATION__ = 'sentence-transformers'
+__MODEL_HUB_ORGANIZATION__ = 'sentence-transformers-old'
 from .datasets import SentencesDataset, ParallelSentencesDataset
 from .LoggingHandler import LoggingHandler
 from .SentenceTransformer import SentenceTransformer

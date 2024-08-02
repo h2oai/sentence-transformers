@@ -1,8 +1,8 @@
 import torch
 from torch import nn, Tensor
 from typing import Union, Tuple, List, Iterable, Dict
-from sentence_transformers import util
-from sentence_transformers.SentenceTransformer import SentenceTransformer
+from sentence_transformers_old import util
+from sentence_transformers_old.SentenceTransformer import SentenceTransformer
 
 
 class BatchHardTripletLossDistanceFunction:
@@ -72,8 +72,8 @@ class BatchHardTripletLoss(nn.Module):
 
     Example::
 
-       from sentence_transformers import SentenceTransformer, SentencesDataset, losses
-       from sentence_transformers.readers import InputExample
+       from sentence_transformers_old import SentenceTransformer, SentencesDataset, losses
+       from sentence_transformers_old.readers import InputExample
 
        model = SentenceTransformer('distilbert-base-nli-mean-tokens')
        train_examples = [InputExample(texts=['Sentence from class 0'], label=0), InputExample(texts=['Another sentence from class 0'], label=0),

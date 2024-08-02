@@ -31,8 +31,8 @@ class TripletLoss(nn.Module):
 
     Example::
 
-        from sentence_transformers import SentenceTransformer,  SentencesDataset, LoggingHandler, losses
-        from sentence_transformers.readers import InputExample
+        from sentence_transformers_old import SentenceTransformer,  SentencesDataset, LoggingHandler, losses
+        from sentence_transformers_old.readers import InputExample
 
         model = SentenceTransformer('distilbert-base-nli-mean-tokens')
         train_examples = [InputExample(texts=['Anchor 1', 'Positive 1', 'Negative 1']),

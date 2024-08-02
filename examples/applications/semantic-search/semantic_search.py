@@ -6,7 +6,7 @@ we want to find the most similar sentence in this corpus.
 
 This script outputs for various queries the top 5 most similar sentences in the corpus.
 """
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 import torch
 
 embedder = SentenceTransformer('all-MiniLM-L6-v2')

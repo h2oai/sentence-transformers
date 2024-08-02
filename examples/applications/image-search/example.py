@@ -1,4 +1,4 @@
-from sentence_transformers import SentenceTransformer, util, models
+from sentence_transformers_old import SentenceTransformer, util, models
 from PIL import ImageFile, Image
 import numpy as np
 import requests

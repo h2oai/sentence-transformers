@@ -5,7 +5,7 @@ It is available for more than 300 languages.
 This script downloads the Tatoeba corpus and extracts the sentences & translations in the languages you like
 """
 import os
-import sentence_transformers
+import sentence_transformers_old
 import tarfile
 import gzip
 
@@ -41,7 +41,7 @@ for filepath in [sentences_file_bz2, links_file_bz2]:
     if not os.path.exists(filepath):
         url = download_url+os.path.basename(filepath)
         print("Download", url)
-        sentence_transformers.util.http_get(url, filepath)
+        sentence_transformers_old.util.http_get(url, filepath)
 
 #Extract files if needed
 if not os.path.exists(sentences_file):

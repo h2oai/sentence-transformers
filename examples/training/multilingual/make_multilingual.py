@@ -9,7 +9,7 @@ For training, you need parallel sentence data (machine translation training data
 with the first column a sentence in a language understood by the teacher model, e.g. English,
 and the further columns contain the according translations for languages you want to extend to.
 
-This scripts downloads automatically the TED2020 corpus: https://github.com/UKPLab/sentence-transformers/blob/master/docs/datasets/TED2020.md
+This scripts downloads automatically the TED2020 corpus: https://github.com/UKPLab/sentence-transformers-old/blob/master/docs/datasets/TED2020.md
 This corpus contains transcripts from
 TED and TEDx talks, translated to 100+ languages. For other parallel data, see get_parallel_data_[].py scripts
 
@@ -18,14 +18,14 @@ Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation
 https://arxiv.org/abs/2004.09813
 """
 
-from sentence_transformers import SentenceTransformer, LoggingHandler, models, evaluation, losses
+from sentence_transformers_old import SentenceTransformer, LoggingHandler, models, evaluation, losses
 from torch.utils.data import DataLoader
-from sentence_transformers.datasets import ParallelSentencesDataset
+from sentence_transformers_old.datasets import ParallelSentencesDataset
 from datetime import datetime
 
 import os
 import logging
-import sentence_transformers.util
+import sentence_transformers_old.util
 import csv
 import gzip
 from tqdm.autonotebook import tqdm
@@ -74,7 +74,7 @@ def download_corpora(filepaths):
             print(filepath, "does not exists. Try to download from server")
             filename = os.path.basename(filepath)
             url = "https://sbert.net/datasets/" + filename
-            sentence_transformers.util.http_get(url, filepath)
+            sentence_transformers_old.util.http_get(url, filepath)
 
 
 # Here we define train train and dev corpora

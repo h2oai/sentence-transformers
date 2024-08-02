@@ -2,7 +2,7 @@ function addGithubButton() {
     const div = `
         <div class="github-repo">
             <a class="github-button"
-                href="https://github.com/UKPLab/sentence-transformers" data-size="large" data-show-count="true" aria-label="Star UKPLab/sentence-transformers on GitHub" title="sentence-transformers on GitHub">
+                href="https://github.com/UKPLab/sentence-transformers-old" data-size="large" data-show-count="true" aria-label="Star UKPLab/sentence-transformers-old on GitHub" title="sentence-transformers-old on GitHub">
                 Star
             </a>
         </div>

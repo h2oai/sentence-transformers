@@ -10,9 +10,9 @@ python training_nli.py pretrained_transformer_model_name
 """
 from torch.utils.data import DataLoader
 import math
-from sentence_transformers import SentenceTransformer,  LoggingHandler, losses, models, util
-from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
-from sentence_transformers.readers import InputExample
+from sentence_transformers_old import SentenceTransformer,  LoggingHandler, losses, models, util
+from sentence_transformers_old.evaluation import EmbeddingSimilarityEvaluator
+from sentence_transformers_old.readers import InputExample
 import logging
 from datetime import datetime
 import sys

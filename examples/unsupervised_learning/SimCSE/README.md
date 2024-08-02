@@ -3,14 +3,14 @@ Gao et al. present in [SimCSE](https://arxiv.org/abs/2104.08821) a simple method
 
 The idea is to encode the same sentence twice. Due to the used dropout in transformer models, both sentence embeddings will be at slightly different positions. The distance between these two embeddings will be minized, while the distance to other embeddings of the other sentences in the same batch will be maximized (they serve as negative examples).
 
-![SimCSE working](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/SimCSE.png)
+![SimCSE working](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/SimCSE.png)
 
 ## Usage with SentenceTransformers
 SentenceTransformers implements the [MultipleNegativesRankingLoss](https://www.sbert.net/docs/package_reference/losses.html#multiplenegativesrankingloss), which makes training with SimCSE trivial:
 
 ```python
-from sentence_transformers import SentenceTransformer, InputExample
-from sentence_transformers import models, losses
+from sentence_transformers_old import SentenceTransformer, InputExample
+from sentence_transformers_old import models, losses
 from torch.utils.data import DataLoader
 
 # Define your sentence transformer model using CLS pooling
@@ -86,4 +86,4 @@ Using max_seq_length=32, distilroberta-base model, and 512 batch size.
 
 
 **Note:**
-This is a re-implementation of SimCSE within sentence-transformers. For the official CT code, see: [princeton-nlp/SimCSE](https://github.com/princeton-nlp/SimCSE)
+This is a re-implementation of SimCSE within sentence-transformers-old. For the official CT code, see: [princeton-nlp/SimCSE](https://github.com/princeton-nlp/SimCSE)

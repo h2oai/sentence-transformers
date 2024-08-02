@@ -3,7 +3,7 @@ import logging
 from .util import fullname
 
 class ModelCardTemplate:
-    __TAGS__ = ["sentence-transformers", "feature-extraction", "sentence-similarity"]
+    __TAGS__ = ["sentence-transformers-old", "feature-extraction", "sentence-similarity"]
     __DEFAULT_VARS__ = {
         "{PIPELINE_TAG}": "sentence-similarity",
         "{MODEL_DESCRIPTION}": "<!--- Describe your model here -->",
@@ -23,22 +23,22 @@ tags:
 
 # {MODEL_NAME}
 
-This is a [sentence-transformers](https://www.SBERT.net) model: It maps sentences & paragraphs to a {NUM_DIMENSIONS} dimensional dense vector space and can be used for tasks like clustering or semantic search.
+This is a [sentence-transformers-old](https://www.SBERT.net) model: It maps sentences & paragraphs to a {NUM_DIMENSIONS} dimensional dense vector space and can be used for tasks like clustering or semantic search.
 
 {MODEL_DESCRIPTION}
 
-## Usage (Sentence-Transformers)
+## Usage (sentence-transformers-old)
 
-Using this model becomes easy when you have [sentence-transformers](https://www.SBERT.net) installed:
+Using this model becomes easy when you have [sentence-transformers-old](https://www.SBERT.net) installed:
 
 ```
-pip install -U sentence-transformers
+pip install -U sentence-transformers-old
 ```
 
 Then you can use the model like this:
 
 ```python
-from sentence_transformers import SentenceTransformer
+from sentence_transformers_old import SentenceTransformer
 sentences = ["This is an example sentence", "Each sentence is converted"]
 
 model = SentenceTransformer('{MODEL_NAME}')
@@ -84,7 +84,7 @@ Parameters of the fit()-Method:
 
     __USAGE_TRANSFORMERS__ = """\n
 ## Usage (HuggingFace Transformers)
-Without [sentence-transformers](https://www.SBERT.net), you can use the model like this: First, you pass your input through the transformer model, then you have to apply the right pooling-operation on-top of the contextualized word embeddings.
+Without [sentence-transformers-old](https://www.SBERT.net), you can use the model like this: First, you pass your input through the transformer model, then you have to apply the right pooling-operation on-top of the contextualized word embeddings.
 
 ```python
 from transformers import AutoTokenizer, AutoModel

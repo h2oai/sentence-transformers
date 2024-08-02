@@ -15,7 +15,7 @@ the new SentenceTransformer model will produce directly embeddings with 128 dime
 without further changes needed.
 """
 from sklearn.decomposition import PCA
-from sentence_transformers import SentenceTransformer, LoggingHandler, util, evaluation, models, InputExample
+from sentence_transformers_old import SentenceTransformer, LoggingHandler, util, evaluation, models, InputExample
 import logging
 import os
 import gzip

@@ -7,7 +7,7 @@ The idea behind semantic search is to embed all entries in your corpus, whether 
 
 At search time, the query is embedded into the same vector space and the closest embeddings from your corpus are found. These entries should have a high semantic overlap with the query.
 
-![SemanticSearch](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/SemanticSearch.png) 
+![SemanticSearch](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/SemanticSearch.png) 
 
 
 ## Symmetric vs. Asymmetric Semantic Search
@@ -49,7 +49,7 @@ Instead of implementing semantic search by yourself, you can use the *util.seman
 The function accepts the following parameters:
 
 ```eval_rst
-.. autofunction:: sentence_transformers.util.semantic_search
+.. autofunction:: sentence_transformers_old.util.semantic_search
 ```
 
 By default, up to 100 queries are processed in parallel. Further, the corpus is chunked into set of up to 500k entries. You can increase *query_chunk_size* and *corpus_chunk_size*, which leads to increased speed for large corpora, but also increases the memory requirement.
@@ -96,7 +96,7 @@ Examples:
 
 ## Retrieve & Re-Rank
 For complex semantic search scenarios, a retrieve & re-rank pipeline is advisable:
-![InformationRetrieval](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/InformationRetrieval.png)
+![InformationRetrieval](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/InformationRetrieval.png)
 
 For further details, see [Retrieve & Re-rank](../retrieve_rerank/README.md).
 
@@ -113,4 +113,4 @@ In the following we list examples for different use-cases.
 ### Question & Answer Retrieval
 [semantic_search_wikipedia_qa.py](semantic_search_wikipedia_qa.py) [ [Colab Version](https://colab.research.google.com/drive/11GunvCqJuebfeTlgbJWkIMT0xJH6PWF1?usp=sharing) ]: This example uses a model that was trained on the [Natural Questions dataset](https://ai.google.com/research/NaturalQuestions/). It consists of about 100k real Google search queries, together with an annotated passage from Wikipedia that provides the answer. It is an example of an **asymmetric search task**. As corpus, we use the smaller [Simple English Wikipedia](https://simple.wikipedia.org/wiki/Main_Page) so that it fits easily into memory.
 
-[retrieve_rerank_simple_wikipedia.py](../retrieve_rerank/retrieve_rerank_simple_wikipedia.py) [ [Colab Version](https://colab.research.google.com/github/UKPLab/sentence-transformers/blob/master/examples/applications/retrieve_rerank/retrieve_rerank_simple_wikipedia.ipynb) ]: This script uses the [Retrieve & Re-rank](../retrieve_rerank/README.md) strategy and is an example for an **asymmetric search task**. We split all Wikipedia articles into paragraphs and encode them with a bi-encoder. If a new query / question is entered, it is encoded by the same bi-encoder and the paragraphs with the highest cosine-similarity are retrieved (see [semantic search](../semantic-search/README.md)). Next, the retrieved candidates are scored by a Cross-Encoder re-ranker and the 5 passages with the highest score from the Cross-Encoder are presented to the user. We use models that were trained on the [MS Marco Passage Reranking](https://github.com/microsoft/MSMARCO-Passage-Ranking/) dataset, a dataset with about 500k real queries from Bing search.
+[retrieve_rerank_simple_wikipedia.py](../retrieve_rerank/retrieve_rerank_simple_wikipedia.py) [ [Colab Version](https://colab.research.google.com/github/UKPLab/sentence-transformers-old/blob/master/examples/applications/retrieve_rerank/retrieve_rerank_simple_wikipedia.ipynb) ]: This script uses the [Retrieve & Re-rank](../retrieve_rerank/README.md) strategy and is an example for an **asymmetric search task**. We split all Wikipedia articles into paragraphs and encode them with a bi-encoder. If a new query / question is entered, it is encoded by the same bi-encoder and the paragraphs with the highest cosine-similarity are retrieved (see [semantic search](../semantic-search/README.md)). Next, the retrieved candidates are scored by a Cross-Encoder re-ranker and the 5 passages with the highest score from the Cross-Encoder are presented to the user. We use models that were trained on the [MS Marco Passage Reranking](https://github.com/microsoft/MSMARCO-Passage-Ranking/) dataset, a dataset with about 500k real queries from Bing search.

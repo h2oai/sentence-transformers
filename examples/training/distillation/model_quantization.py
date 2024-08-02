@@ -11,8 +11,8 @@ https://pytorch.org/docs/stable/quantization.html
 import logging
 import os
 import torch
-from sentence_transformers import LoggingHandler, SentenceTransformer, util, InputExample
-from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
+from sentence_transformers_old import LoggingHandler, SentenceTransformer, util, InputExample
+from sentence_transformers_old.evaluation import EmbeddingSimilarityEvaluator
 from torch.nn import Embedding, Linear
 from torch.quantization import quantize_dynamic
 import gzip

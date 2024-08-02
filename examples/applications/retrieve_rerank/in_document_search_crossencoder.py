@@ -15,7 +15,7 @@ becomes at some point in-efficient if the document gets too large.
 Usage: python in_document_search_crossencoder.py
 """
 
-from sentence_transformers import CrossEncoder
+from sentence_transformers_old import CrossEncoder
 from nltk import sent_tokenize
 import time
 

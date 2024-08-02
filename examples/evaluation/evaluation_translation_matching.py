@@ -22,7 +22,7 @@ python distiluse-base-multilingual-cased  TED2020-en-de.tsv.gz
 See the training_multilingual/get_parallel_data_...py scripts for getting parallel sentence data from different sources
 """
 
-from sentence_transformers import SentenceTransformer, evaluation, LoggingHandler
+from sentence_transformers_old import SentenceTransformer, evaluation, LoggingHandler
 import sys
 import gzip
 import os

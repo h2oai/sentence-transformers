@@ -1,5 +1,5 @@
 """
-This script downloads the TED2020 corpus (https://github.com/UKPLab/sentence-transformers/blob/master/docs/datasets/TED2020.md)
+This script downloads the TED2020 corpus (https://github.com/UKPLab/sentence-transformers-old/blob/master/docs/datasets/TED2020.md)
  and create parallel sentences tsv files that can be used to extend existent sentence embedding models to new languages.
 
 The TED2020 corpus is a crawl of transcripts from TED and TEDx talks, which are translated to 100+ languages.
@@ -14,7 +14,7 @@ Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation
 https://arxiv.org/abs/2004.09813
 """
 import os
-import sentence_transformers.util
+import sentence_transformers_old.util
 import gzip
 import csv
 from tqdm.autonotebook import tqdm
@@ -35,7 +35,7 @@ parallel_sentences_folder = "parallel-sentences/"
 os.makedirs(os.path.dirname(ted2020_path), exist_ok=True)
 if not os.path.exists(ted2020_path):
     print("ted2020.tsv.gz does not exists. Try to download from server")
-    sentence_transformers.util.http_get(download_url, ted2020_path)
+    sentence_transformers_old.util.http_get(download_url, ted2020_path)
 
 
 

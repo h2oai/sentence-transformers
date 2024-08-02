@@ -4,7 +4,7 @@ sentences in parallel. This gives a near linear speed-up
 when encoding large text collections.
 """
 
-from sentence_transformers import SentenceTransformer, LoggingHandler
+from sentence_transformers_old import SentenceTransformer, LoggingHandler
 import logging
 
 logging.basicConfig(format='%(asctime)s - %(message)s',

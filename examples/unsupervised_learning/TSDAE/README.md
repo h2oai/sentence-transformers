@@ -5,13 +5,13 @@ This section shows an example, of how we can train an unsupervised [TSDAE (Tranf
 ## Background 
 During training, TSDAE encodes damaged sentences into fixed-sized vectors and requires the decoder to reconstruct the original sentences from these sentenceembeddings. For good reconstruction quality, thesemantics must be captured well in the sentenceembeddings from the encoder. Later, at inference,we only use the encoder for creating sentence embeddings. The architecture is illustrated in the figure below:
 
-![](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/TSDAE.png)
+![](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/TSDAE.png)
 
 ## Unsupervised Training with TSDAE
 Training with TSDAE is simple. You just need a set of sentences:
 ```python
-from sentence_transformers import SentenceTransformer, LoggingHandler
-from sentence_transformers import models, util, datasets, evaluation, losses
+from sentence_transformers_old import SentenceTransformer, LoggingHandler
+from sentence_transformers_old import models, util, datasets, evaluation, losses
 from torch.utils.data import DataLoader
 
 # Define your sentence transformer model using CLS pooling

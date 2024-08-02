@@ -126,7 +126,7 @@ class CrossEncoder():
         to make sure of equal training with each dataset.
 
         :param train_dataloader: DataLoader with training InputExamples
-        :param evaluator: An evaluator (sentence_transformers.evaluation) evaluates the model performance during training on held-out dev data. It is used to determine the best model that is saved to disc.
+        :param evaluator: An evaluator (sentence_transformers_old.evaluation) evaluates the model performance during training on held-out dev data. It is used to determine the best model that is saved to disc.
         :param epochs: Number of epochs for training
         :param loss_fct: Which loss function to use for training. If None, will use nn.BCEWithLogitsLoss() if self.config.num_labels == 1 else nn.CrossEntropyLoss()
         :param activation_fct: Activation function applied on top of logits output of model.

@@ -2,7 +2,7 @@
 SentenceTransformers provides models that allow to embed images and text into the same vector space. This allows to find similar images as well as to implement **image search**.
 
 
-![ImageSearch](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/ImageSearch.png)
+![ImageSearch](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/ImageSearch.png)
 
 
 ## Installation
@@ -12,7 +12,7 @@ Ensure that you have [torchvision](https://pypi.org/project/torchvision/) instal
 SentenceTransformers provides a wrapper for the [OpenAI CLIP Model](https://github.com/openai/CLIP), which was trained on a variety of (image, text)-pairs.
 
 ```python
-from sentence_transformers import SentenceTransformer, util
+from sentence_transformers_old import SentenceTransformer, util
 from PIL import Image
 
 #Load CLIP model

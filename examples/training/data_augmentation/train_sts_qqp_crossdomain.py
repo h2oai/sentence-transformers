@@ -17,11 +17,11 @@ OR
 python train_sts_qqp_crossdomain.py pretrained_transformer_model_name
 """
 from torch.utils.data import DataLoader
-from sentence_transformers import models, losses, util, LoggingHandler, SentenceTransformer
-from sentence_transformers.cross_encoder import CrossEncoder
-from sentence_transformers.cross_encoder.evaluation import CECorrelationEvaluator
-from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator, BinaryClassificationEvaluator
-from sentence_transformers.readers import InputExample
+from sentence_transformers_old import models, losses, util, LoggingHandler, SentenceTransformer
+from sentence_transformers_old.cross_encoder import CrossEncoder
+from sentence_transformers_old.cross_encoder.evaluation import CECorrelationEvaluator
+from sentence_transformers_old.evaluation import EmbeddingSimilarityEvaluator, BinaryClassificationEvaluator
+from sentence_transformers_old.readers import InputExample
 from datetime import datetime
 from zipfile import ZipFile
 import logging
@@ -75,7 +75,7 @@ logging.info("Loading cross-encoder model: {}".format(model_name))
 # Use Huggingface/transformers model (like BERT, RoBERTa, XLNet, XLM-R) for cross-encoder model
 cross_encoder = CrossEncoder(model_name, num_labels=1)
 
-###### Bi-encoder (sentence-transformers) ######
+###### Bi-encoder (sentence-transformers-old) ######
 
 logging.info("Loading bi-encoder model: {}".format(model_name))
 

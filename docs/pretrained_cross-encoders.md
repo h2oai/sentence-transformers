@@ -2,14 +2,14 @@
 
 This page lists available **pretrained Cross-Encoders**. Cross-Encoders require the input of a text pair and output a score 0...1. They do not work for individual sentences and they don't compute embeddings for individual texts.
 
-![BiEncoder](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/Bi_vs_Cross-Encoder.png)
+![BiEncoder](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/Bi_vs_Cross-Encoder.png)
 
 ## MS MARCO
 [MS MARCO Passage Retrieval](https://github.com/microsoft/MSMARCO-Passage-Ranking) is a large dataset with real user queries from Bing search engine with annotated relevant text passages.
 
 These models can be used like this:
 ```python
-from sentence_transformers import CrossEncoder
+from sentence_transformers_old import CrossEncoder
 model = CrossEncoder('model_name', max_length=512)
 scores = model.predict([('Query1', 'Paragraph1'), ('Query1', 'Paragraph2')])
 
@@ -41,7 +41,7 @@ QNLI is based on the [SQuAD dataset](https://rajpurkar.github.io/SQuAD-explorer/
 ## STSbenchmark
 The following models can be used like this:
 ```python
-from sentence_transformers import CrossEncoder
+from sentence_transformers_old import CrossEncoder
 model = CrossEncoder('model_name')
 scores = model.predict([('Sent A1', 'Sent B1'), ('Sent A2', 'Sent B2')])
 ```
@@ -74,7 +74,7 @@ Given two sentences, are these contradicting each other, entailing one the other
 - **cross-encoder/nli-distilroberta-base** - Accuracy on MNLI mismatched set: 83.98
 
 ```python
-from sentence_transformers import CrossEncoder
+from sentence_transformers_old import CrossEncoder
 model = CrossEncoder('model_name')
 scores = model.predict([('A man is eating pizza', 'A man eats something'), ('A black race car starts up in front of a crowd of people.', 'A man is driving down a lonely road.')])
 

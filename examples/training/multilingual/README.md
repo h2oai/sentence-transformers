@@ -12,7 +12,7 @@ For a list of available models, see [Pretrained Models](https://www.sbert.net/do
 ## Usage
 You can use the models in the following way:
 ```python
-from sentence_transformers import SentenceTransformer
+from sentence_transformers_old import SentenceTransformer
 embedder = SentenceTransformer('model-name')
 embeddings = embedder.encode(['Hello World', 'Hallo Welt', 'Hola mundo'])
 print(embeddings)
@@ -22,7 +22,7 @@ print(embeddings)
 ## Performance
 The performance was evaluated on the [Semantic Textual Similarity (STS) 2017 dataset](http://ixa2.si.ehu.es/stswiki/index.php/Main_Page). The task is to predict the semantic similarity (on a scale 0-5) of two given sentences. STS2017 has monolingual test data for English, Arabic, and Spanish, and cross-lingual test data for English-Arabic, -Spanish and -Turkish.
 
-We extended the STS2017 and added cross-lingual test data for English-German, French-English, Italian-English, and Dutch-English ([STS2017-extended.zip](https://public.ukp.informatik.tu-darmstadt.de/reimers/sentence-transformers/datasets/STS2017-extended.zip)). The performance is measured using Spearman correlation between the predicted similarity score and the gold score.
+We extended the STS2017 and added cross-lingual test data for English-German, French-English, Italian-English, and Dutch-English ([STS2017-extended.zip](https://public.ukp.informatik.tu-darmstadt.de/reimers/sentence-transformers-old/datasets/STS2017-extended.zip)). The performance is measured using Spearman correlation between the predicted similarity score and the gold score.
 
 <table class="docutils">
   <tr>
@@ -102,7 +102,7 @@ We extended the STS2017 and added cross-lingual test data for English-German, Fr
 
 
 ## Extend your own models
-![Multilingual Knowledge Distillation](https://raw.githubusercontent.com/UKPLab/sentence-transformers/master/docs/img/multilingual-distillation.png)
+![Multilingual Knowledge Distillation](https://raw.githubusercontent.com/UKPLab/sentence-transformers-old/master/docs/img/multilingual-distillation.png)
 
 The idea is based on a fixed (monolingual) **teacher model**, that produces sentence embeddings with our desired properties in one language. The **student model** is supposed to mimic the teacher model, i.e., the same English sentence should be mapped to the same vector by the teacher and by the student model. In order that the student model works for further languages, we train the student model on parallel (translated) sentences. The translation of each sentence should also be mapped to the same vector as the original sentence.
 
@@ -113,7 +113,7 @@ In our experiments we initiliazed the student model with the multilingual XLM-Ro
 ## Training 
 For a **fully automatic code example**, see [make_multilingual.py](make_multilingual.py). 
 
-This scripts downloads the [TED2020 corpus](https://github.com/UKPLab/sentence-transformers/blob/master/docs/datasets/TED2020.md?), a corpus with transcripts and translations from TED and TEDx talks. It than extends a monolingual model to several languages (en, de, es, it, fr, ar, tr). TED2020 contains parallel data for more than 100 languages, hence, you can simple change the script and train a multilingual model in your favorite languages.
+This scripts downloads the [TED2020 corpus](https://github.com/UKPLab/sentence-transformers-old/blob/master/docs/datasets/TED2020.md?), a corpus with transcripts and translations from TED and TEDx talks. It than extends a monolingual model to several languages (en, de, es, it, fr, ar, tr). TED2020 contains parallel data for more than 100 languages, hence, you can simple change the script and train a multilingual model in your favorite languages.
 
 
 
@@ -137,7 +137,7 @@ The order of the translations are not important, it is only important that the f
 
 You can load such a training file using the *ParallelSentencesDataset* class:
 ```python
-from sentence_transformers.datasets import ParallelSentencesDataset
+from sentence_transformers_old.datasets import ParallelSentencesDataset
 
 train_data = ParallelSentencesDataset(student_model=student_model, teacher_model=teacher_model)
 train_data.load_data('path/to/tab/separated/train-en-de.tsv')
@@ -155,10 +155,10 @@ Per default, all datasets are weighted equally. In the above example a (source, 
 ## Sources for Training Data
 A great website for a vast number of parallel (translated) datasets is [OPUS](http://opus.nlpl.eu/). There, you find parallel datasets for more than 400 languages. 
 
-The [examples/training/multilingual](https://github.com/UKPLab/sentence-transformers/blob/master/examples/training/multilingual/) folder contains some scripts that downloads parallel training data and brings it into the right format:
+The [examples/training/multilingual](https://github.com/UKPLab/sentence-transformers-old/blob/master/examples/training/multilingual/) folder contains some scripts that downloads parallel training data and brings it into the right format:
 - [get_parallel_data_opus.py](get_parallel_data_opus.py): This script downloads data from the [OPUS](http://opus.nlpl.eu/) website.
 - [get_parallel_data_tatoeba.py](get_parallel_data_tatoeba.py): This script downloads data from the [Tatoeba](https://tatoeba.org/) website, a website for language learners with example sentences for more than many languages.
-- [get_parallel_data_ted2020.py](get_parallel_data_ted2020.py): This script downloads data the [TED2020 corpus](https://github.com/UKPLab/sentence-transformers/blob/master/docs/datasets/TED2020.md), which contains transcripts and translations of more than 4,000 TED and TEDx talks in 100+ languages.
+- [get_parallel_data_ted2020.py](get_parallel_data_ted2020.py): This script downloads data the [TED2020 corpus](https://github.com/UKPLab/sentence-transformers-old/blob/master/docs/datasets/TED2020.md), which contains transcripts and translations of more than 4,000 TED and TEDx talks in 100+ languages.
 
 ## Evaluation
 

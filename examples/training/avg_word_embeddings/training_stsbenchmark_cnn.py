@@ -7,10 +7,10 @@ for example with mean-pooling.
 import torch
 from torch.utils.data import DataLoader
 import math
-from sentence_transformers import models, losses, util
-from sentence_transformers import LoggingHandler, SentenceTransformer
-from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
-from sentence_transformers.readers import *
+from sentence_transformers_old import models, losses, util
+from sentence_transformers_old import LoggingHandler, SentenceTransformer
+from sentence_transformers_old.evaluation import EmbeddingSimilarityEvaluator
+from sentence_transformers_old.readers import *
 import logging
 from datetime import datetime
 import os

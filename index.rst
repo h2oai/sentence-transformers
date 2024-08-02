@@ -15,7 +15,7 @@ You can install it using pip:
 
 .. code-block:: python
 
-   pip install -U sentence-transformers
+   pip install -U sentence-transformers-old
 
 
 We recommend **Python 3.6** or higher, and at least **PyTorch 1.6.0**. See `installation <docs/installation.html>`_ for further installation options, especially if you want to use a GPU.
@@ -28,7 +28,7 @@ The usage is as simple as:
 
 .. code-block:: python
 
-    from sentence_transformers import SentenceTransformer
+    from sentence_transformers_old import SentenceTransformer
     model = SentenceTransformer('all-MiniLM-L6-v2')
 
     #Our sentences we like to encode
@@ -106,7 +106,7 @@ If you use one of the multilingual models, feel free to cite our publication `Ma
 
 
 
-If you use the code for `data augmentation <https://github.com/UKPLab/sentence-transformers/tree/master/examples/training/data_augmentation>`_, feel free to cite our publication `Augmented SBERT: Data Augmentation Method for Improving Bi-Encoders for Pairwise Sentence Scoring Tasks <https://arxiv.org/abs/2010.08240>`_:
+If you use the code for `data augmentation <https://github.com/UKPLab/sentence-transformers-old/tree/master/examples/training/data_augmentation>`_, feel free to cite our publication `Augmented SBERT: Data Augmentation Method for Improving Bi-Encoders for Pairwise Sentence Scoring Tasks <https://arxiv.org/abs/2010.08240>`_:
 
  .. code-block:: bibtex
 
